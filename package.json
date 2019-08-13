@@ -1,16 +1,16 @@
 {
-  "name": "@rynrn/ngx-wooApi",
-  "version": "8.2.0-test-1",
+  "name": "ngx-woocommerce-api",
+  "version": "8.2.0-test-2",
   "scripts": {
     "ng": "ng",
+    "deploy": "cd dist/woo-api && npm publish",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
-  "dependencies": {
+  "peerDependencies": {
     "@angular/animations": "~8.2.0",
     "@angular/common": "~8.2.0",
     "@angular/compiler": "~8.2.0",
