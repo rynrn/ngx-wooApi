@@ -120,6 +120,41 @@
           }
         }
       }
+    },
+    "wooapi": {
+      "projectType": "library",
+      "root": "projects/wooapi",
+      "sourceRoot": "projects/wooapi/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/wooapi/tsconfig.lib.json",
+            "project": "projects/wooapi/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/wooapi/src/test.ts",
+            "tsConfig": "projects/wooapi/tsconfig.spec.json",
+            "karmaConfig": "projects/wooapi/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/wooapi/tsconfig.lib.json",
+              "projects/wooapi/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "woo-api"
 }
